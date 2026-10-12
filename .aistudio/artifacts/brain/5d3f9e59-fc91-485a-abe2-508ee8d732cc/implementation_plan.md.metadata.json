@@ -1,0 +1,6 @@
+{
+  "summary":  "Implementation plan for the Manufacturing Plant Quality Inspection AI Agent, featuring live stream conveyor defect simulation, multimodal computer vision defect detection with bounding boxes, customizable multi-sector inspection lines, and automated 8D/CAPA non-conformance report generation.",
+  "updatedAt":  "2026-10-12T10:08:54.932982299Z",
+  "requestFeedback":  true,
+  "userFacing":  true
+}
