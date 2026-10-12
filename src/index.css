@@ -1,1 +1,82 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+  
+  .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@keyframes scanline {
+  0% {
+    top: 0%;
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0.2;
+  }
+}
+
+.animate-scan {
+  animation: scanline 2.2s ease-in-out infinite alternate;
+}
+
+@keyframes conveyorMove {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 0;
+  }
+}
+
+.conveyor-pattern {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(51, 65, 85, 0.4) 0px,
+    rgba(51, 65, 85, 0.4) 4px,
+    transparent 4px,
+    transparent 20px
+  );
+  animation: conveyorMove 1.5s linear infinite;
+}
+
+.conveyor-pattern-paused {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(51, 65, 85, 0.4) 0px,
+    rgba(51, 65, 85, 0.4) 4px,
+    transparent 4px,
+    transparent 20px
+  );
+  animation-play-state: paused;
+}
+
+/* Print styling for formal 8D & CAPA dossiers */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-card {
+    border: 1px solid #cbd5e1 !important;
+    background: #ffffff !important;
+    color: #0f172a !important;
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+}

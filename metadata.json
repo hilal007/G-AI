@@ -1,6 +1,6 @@
 {
-  "name": "",
-  "description": "",
-  "requestFramePermissions": [],
+  "name": "QualityForge AI - Manufacturing QA & Defect Inspection",
+  "description": "Industrial-grade computer vision QA agent with real-time conveyor defect detection, bounding box overlays, and automated 8D/CAPA corrective action reports.",
+  "requestFramePermissions": ["camera"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
